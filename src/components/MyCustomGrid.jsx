@@ -2,8 +2,13 @@ import React, { Component } from "react";
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 import { Typography } from "@mui/material";
+import MyCustomButton from '../components/MyCustomButton';
+import MyCustomIMGTable from '../components/MyCustomIMGTable';
+import MyCustomTable from '../components/MyCustomTable';
+import ToDoList from '../components/ToDoList';
+
 
 
 
@@ -27,18 +32,22 @@ export default class MyCustomGrid extends Component {
       return (
     <div>
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid xs={8}>
-          <Item><Typography variant="h1">Responsive Grid</Typography></Item>
+      <Grid container >
+      <Grid item={true} xs={4}>
+          <Item><ToDoList/></Item>
         </Grid>
-        <Grid xs={4}>
-          <Item><Typography variant="h6">Responsive Grid</Typography></Item>
+        <Grid item={true} xs={12}>
+          <Item><MyCustomButton/></Item>
         </Grid>
-        <Grid xs={4}>
-          <Item><Typography variant="h4">Responsive Grid</Typography></Item>
+        <Grid item={true} xs>
+          <Item><MyCustomTable/></Item>
         </Grid>
-        <Grid xs={8}>
-          <Item><Typography variant="h2">Responsive Grid</Typography></Item>
+        <Grid item={true} xs >
+          <Item><MyCustomIMGTable/></Item>
+        </Grid>
+        
+        <Grid item={true} xs>
+        <Item><Typography variant="h1">This is a responsive grid box</Typography></Item>
         </Grid>
       </Grid>
     </Box>
