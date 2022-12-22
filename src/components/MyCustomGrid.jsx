@@ -32,21 +32,21 @@ export default class MyCustomGrid extends Component {
       return (
     <div>
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container >
-      <Grid item={true} xs={4}>
+      <Grid container spacing={3} container >
+      <Grid item={true} xs={6}>
           <Item><ToDoList/></Item>
         </Grid>
-        <Grid item={true} xs={12}>
+        <Grid item={true} xs={6}>
           <Item><MyCustomButton/></Item>
         </Grid>
         <Grid item={true} xs>
           <Item><MyCustomTable/></Item>
         </Grid>
-        <Grid item={true} xs >
+        <Grid  item={true} xs >
           <Item><MyCustomIMGTable/></Item>
         </Grid>
         
-        <Grid item={true} xs>
+        <Grid item={true} xs={12}>
         <Item><Typography variant="h1">This is a responsive grid box</Typography></Item>
         </Grid>
       </Grid>
