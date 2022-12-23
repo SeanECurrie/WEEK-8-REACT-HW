@@ -6,6 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
 
 
 function createData(
@@ -38,25 +39,26 @@ export default class MyCustomButton extends Component {
     
     return (
 
-      <div>
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Box
+         >
+        <TableContainer sx={{borderRadius: 4}} component={Paper}>
+          <Table sx={{minWidth: 650 }} aria-label="simple table">
             <TableHead>
-              <TableRow>
-                <TableCell>Honey-Do list</TableCell>
+              <TableRow >
+                <TableCell >Honey-Do list</TableCell>
                 <TableCell align="right">Calories</TableCell>
                 <TableCell align="right">Fat&nbsp;(g)</TableCell>
                 <TableCell align="right">Carbs&nbsp;(g)</TableCell>
                 <TableCell align="right">Protein&nbsp;(g)</TableCell>
               </TableRow>
             </TableHead>
-            <TableBody>
+            <TableBody  >
               {rows.map((row) => (
-                <TableRow
+                <TableRow 
                   key={row.name}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
-                  <TableCell component="th" scope="row">
+                  <TableCell  component="th" scope="row">
                     {row.name}
                   </TableCell>
                   <TableCell align="right">{row.calories}</TableCell>
@@ -71,7 +73,7 @@ export default class MyCustomButton extends Component {
       
        
         
-        </div>
+        </Box>
     );
   }
 }
