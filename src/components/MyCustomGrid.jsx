@@ -32,7 +32,7 @@ export default class MyCustomGrid extends Component {
       return (
     <div>
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={3} container >
+      <Grid container spacing={3}  >
       <Grid item={true} xs={6}>
           <Item><ToDoList/></Item>
         </Grid>
