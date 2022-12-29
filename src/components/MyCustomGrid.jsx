@@ -27,18 +27,13 @@ export default class MyCustomGrid extends Component {
     return (
       <div>
         <Box sx={{ gap: 2, p: 2, mx: "auto", width: "95%", flexGrow: 1 }}>
-          <Grid container spacing={3}>
-            <Grid item={true} xs={12}>
+          <Grid container spacing={4}>
+            <Grid item={true} xs={6}>
               <Item>
                 <ToDoList />
               </Item>
             </Grid>
-            <Grid item={true} xs={12}>
-              <Item>
-                <MyCustomButton />
-              </Item>
-            </Grid>
-            <Grid item={true} xs={12}>
+            <Grid item={true} xs={6}>
               <Item
                 sx={{
                   backgroundColor: "primary.dark",
@@ -50,47 +45,50 @@ export default class MyCustomGrid extends Component {
                 <MyCustomTable />
               </Item>
             </Grid>
-            <Grid item={true} xs={12}>
-              <Item>
-                <MyCustomIMGTable />
-              </Item>
-            </Grid>
 
-            <Grid item={true} xs={12}>
+            <Grid item={true} xs={6}>
               <Item>
                 <div>
-                <Formik
-                  initialValues={{
-                    firstName: "",
-                    lastName: "",
-                    email: "",
-                  }}
-                  onSubmit={async (values) => {
-                    await new Promise((r) => setTimeout(r, 500));
-                    alert(JSON.stringify(values, null, 2));
-                  }}
-                >
-                  <Form>
-                    <label htmlFor="firstName">First Name</label>
-                    <Field id="firstName" name="firstName" placeholder="Jane" />
+                  <Formik
+                    initialValues={{
+                      firstName: "",
+                      lastName: "",
+                      email: "",
+                    }}
+                    onSubmit={async (values) => {
+                      await new Promise((r) => setTimeout(r, 500));
+                      alert(JSON.stringify(values, null, 2));
+                    }}
+                  >
+                    <Form>
+                      <label htmlFor="firstName">First Name</label>
+                      <Field
+                        id="firstName"
+                        name="firstName"
+                        placeholder="Jane"
+                      />
 
-                    <label htmlFor="lastName">Last Name</label>
-                    <Field id="lastName" name="lastName" placeholder="Doe" />
+                      <label htmlFor="lastName">Last Name</label>
+                      <Field id="lastName" name="lastName" placeholder="Doe" />
 
-                    <label htmlFor="email">Email</label>
-                    <Field
-                      id="email"
-                      name="email"
-                      placeholder="jane@acme.com"
-                      type="email"
-                    />
-                    <button type="submit">Submit</button>
-                  </Form>
-                  
-                </Formik>
+                      <label htmlFor="email">Email</label>
+                      <Field
+                        id="email"
+                        name="email"
+                        placeholder="jane@acme.com"
+                        type="email"
+                      />
+                      <button type="submit">Submit</button>
+                    </Form>
+                  </Formik>
                 </div>
               </Item>
             </Grid>
+          </Grid>
+          <Grid item={true} xs={12}>
+            <Item sx={{m:2}}>
+              <MyCustomButton />
+            </Item>
           </Grid>
         </Box>
       </div>
