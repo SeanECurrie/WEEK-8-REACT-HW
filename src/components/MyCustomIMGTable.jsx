@@ -4,8 +4,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ImageListItemBar from "@mui/material/ImageListItemBar";
 import Box from "@mui/material/Box";
 import { Container } from "@mui/material";
-import  Stack  from "@mui/material/Stack";
-
+import Stack from "@mui/material/Stack";
 import { itemData } from "./data";
 import { motion } from "framer-motion";
 
@@ -30,7 +29,6 @@ const imageHover = {
 };
 
 export default class MyCustomIMGTable extends Component {
-
   render() {
     return (
       <Container>

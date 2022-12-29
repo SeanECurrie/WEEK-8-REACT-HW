@@ -52,12 +52,23 @@ export default class ToDoList extends Component {
   render() {
     return (
       <div>
-        <Box sx={{ m: 2, borderRadius: 4, border: 2, fontWeight: "bold", textTransform: 'uppercase' }}>
+        <Box
+          sx={{
+            m: 2,
+            borderRadius: 4,
+            border: 2,
+            fontWeight: "bold",
+            textTransform: "uppercase",
+          }}
+        >
           <Typography variant="h2">Honey-do List</Typography>
         </Box>
         <br />
-        <Input label="Outlined secondary" color="secondary" focused
-          sx={{ m: 2 , textTransform: 'uppercase'}}
+        <Input
+          label="Outlined secondary"
+          color="secondary"
+          focused
+          sx={{ m: 2, textTransform: "uppercase" }}
           type="text"
           placeholder="Type item here....."
           value={this.state.newItem}
@@ -65,7 +76,7 @@ export default class ToDoList extends Component {
         />
         <br />
         <Button
-          sx={{ m: 2 ,textTransform: 'uppercase',}}
+          sx={{ m: 2, textTransform: "uppercase" }}
           variant="contained"
           onClick={() => this.addItem()}
         >

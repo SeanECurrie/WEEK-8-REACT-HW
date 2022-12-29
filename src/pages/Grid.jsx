@@ -1,7 +1,7 @@
 import React from "react";
 import MyCustomGrid from "../components/MyCustomGrid";
 
-function Products() {
+function Grid() {
   return (
     <>
       <MyCustomGrid></MyCustomGrid>
@@ -9,4 +9,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default Grid;

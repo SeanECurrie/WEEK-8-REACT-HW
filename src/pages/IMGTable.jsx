@@ -2,14 +2,14 @@ import React from "react";
 import MyCustomIMGTable from "../components/MyCustomIMGTable";
 import Box from "@mui/material/Box";
 
-function Reports() {
+function IMGTable() {
   return (
     <>
-      
-      <MyCustomIMGTable />
-      
+      <Box>
+        <MyCustomIMGTable />
+      </Box>
     </>
   );
 }
 
-export default Reports;
+export default IMGTable;
