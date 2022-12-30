@@ -23,19 +23,19 @@ export const SidebarData = [
     cName: "nav-text",
   },
   {
-    title: "Team",
+    title: "My Leagues",
     path: "/team",
     icon: <IoIcons.IoMdPeople />,
     cName: "nav-text",
   },
   {
-    title: "Messages",
+    title: "My Teams",
     path: "/messages",
     icon: <FaIcons.FaEnvelopeOpenText />,
     cName: "nav-text",
   },
   {
-    title: "Support",
+    title: "Profile",
     path: "/support",
     icon: <IoIcons.IoMdHelpCircle />,
     cName: "nav-text",
