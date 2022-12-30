@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 function IMGTable() {
   return (
     <>
-      <Box>
+      <Box sx={{ gap: 2, p: 2, mx: "auto", width: "95%", flexGrow: 1 }}>
         <MyCustomIMGTable />
       </Box>
     </>
