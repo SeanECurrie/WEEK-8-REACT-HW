@@ -26,12 +26,12 @@ export default class MyCustomGrid extends Component {
       <div>
         <Box sx={{ gap: 2, p: 2, mx: "auto", width: "95%", flexGrow: 1 }}>
           <Grid container spacing={4}>
-            <Grid item={true} xs={4}>
+            <Grid item={true} xs={12}>
               <Item>
                 <ToDoList />
               </Item>
             </Grid>
-            <Grid item={true} xs={8}>
+            <Grid item={true} xs={12}>
               <Item
                 sx={{
                   backgroundColor: "primary.dark",
