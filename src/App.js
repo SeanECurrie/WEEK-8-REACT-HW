@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import IMGTable from "./pages/IMGTable";
 import Grid from "./pages/Grid";
 import Navbar from "./components/Navbar";
+import Shop from "./pages/Shop";
 
 const darkTheme = createTheme({
   palette: {
@@ -24,12 +25,13 @@ class App extends Component {
 
         <div className="App">
           <>
-            <Router>
+            <Router>        
               <Navbar />
               <Routes>
                 <Route path="/" element={<Home />} exact />
                 <Route path="/IMGTable" element={<IMGTable />} />
                 <Route path="/Grid" element={<Grid />} />
+                <Route path="/Shop" element={<Shop />} />
               </Routes>
             </Router>
           </>
